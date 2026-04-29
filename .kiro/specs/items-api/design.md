@@ -12,7 +12,7 @@ API REST stateless construída com ASP.NET Core (.NET 9), organizada em camadas 
 |--------|-----------|
 | Framework | ASP.NET Core 9 |
 | Linguagem | C# 13 |
-| Documentação | Swagger / Swashbuckle |
+| Documentação | Swagger / Swashbuckle 6.5.0 |
 | Armazenamento | Lista em memória (`List<int>`) |
 | Logging | `ILogger` nativo do ASP.NET Core |
 
@@ -63,21 +63,22 @@ ItemsApi/
 ### GET /items
 - **Descrição:** Retorna todos os itens cadastrados
 - **Response:** `200 OK` → `[{ "value": 1 }, { "value": 2 }]`
+- **Response vazio:** `200 OK` → `[]`
 
 ### POST /items
 - **Descrição:** Adiciona um novo item inteiro
 - **Request Body:** `{ "value": 10 }`
 - **Responses:**
   - `201 Created` → `{ "message": "Item criado com sucesso" }`
-  - `400 Bad Request` → entrada inválida
-  - `409 Conflict` → valor duplicado
+  - `400 Bad Request` → entrada inválida (model binding)
+  - `409 Conflict` → `{ "message": "Item já existe." }`
 
 ### DELETE /items/{value}
 - **Descrição:** Remove um item pelo valor
-- **Parâmetro de rota:** `value` (int)
+- **Parâmetro de rota:** `value` (int, constraint `:int`)
 - **Responses:**
   - `200 OK` → `{ "message": "Item removido com sucesso" }`
-  - `404 Not Found` → item não existe
+  - `404 Not Found` → `{ "message": "Item não encontrado." }`
 
 ---
 
@@ -122,3 +123,4 @@ private readonly List<int> _items = new();
 | `Singleton` para o serviço | Garante que a lista persista entre requisições |
 | Retorno de `object` anônimo | Evita criar DTOs desnecessários para respostas simples |
 | Rota com constraint `:int` | Garante que o parâmetro `{value}` seja inteiro na própria rota |
+| Tuple de retorno no Service | Permite comunicar sucesso/falha sem lançar exceções |

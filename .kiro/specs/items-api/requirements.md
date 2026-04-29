@@ -9,8 +9,8 @@ Desenvolver uma API REST para gerenciamento de itens numéricos inteiros, com op
 ## User Stories
 
 ### US-01 — Listar itens
-**Como** consumidor da API,  
-**Quero** consultar todos os itens cadastrados,  
+**Como** consumidor da API,
+**Quero** consultar todos os itens cadastrados,
 **Para que** eu possa visualizar o estado atual da coleção.
 
 **Critérios de aceite:**
@@ -21,8 +21,8 @@ Desenvolver uma API REST para gerenciamento de itens numéricos inteiros, com op
 ---
 
 ### US-02 — Criar item
-**Como** consumidor da API,  
-**Quero** adicionar um novo número inteiro à coleção,  
+**Como** consumidor da API,
+**Quero** adicionar um novo número inteiro à coleção,
 **Para que** ele passe a fazer parte do conjunto gerenciado.
 
 **Critérios de aceite:**
@@ -35,8 +35,8 @@ Desenvolver uma API REST para gerenciamento de itens numéricos inteiros, com op
 ---
 
 ### US-03 — Remover item
-**Como** consumidor da API,  
-**Quero** remover um item específico pelo seu valor,  
+**Como** consumidor da API,
+**Quero** remover um item específico pelo seu valor,
 **Para que** ele deixe de fazer parte da coleção.
 
 **Critérios de aceite:**

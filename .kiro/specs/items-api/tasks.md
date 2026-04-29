@@ -16,7 +16,7 @@
 |---|--------|--------|
 | 1.1 | Criar projeto ASP.NET Core Web API (.NET 9) | ✅ |
 | 1.2 | Configurar `Program.cs` com DI, Swagger e roteamento | ✅ |
-| 1.3 | Adicionar pacote `Swashbuckle.AspNetCore` | ✅ |
+| 1.3 | Adicionar pacote `Swashbuckle.AspNetCore` 6.5.0 | ✅ |
 
 ---
 
@@ -47,7 +47,7 @@
 | 4.2 | Implementar `GET /items` | ✅ |
 | 4.3 | Implementar `POST /items` com retorno 201/400/409 | ✅ |
 | 4.4 | Implementar `DELETE /items/{value}` com retorno 200/404 | ✅ |
-| 4.5 | Adicionar logging por endpoint | ✅ |
+| 4.5 | Adicionar logging por endpoint via `ILogger` | ✅ |
 
 ---
 
@@ -60,16 +60,6 @@
 | 5.3 | Criar `design.md` com arquitetura e decisões técnicas | ✅ |
 | 5.4 | Criar `tasks.md` com rastreamento de tarefas | ✅ |
 | 5.5 | Criar `coding-standards.md` com padrões do projeto | ✅ |
-
----
-
-## FASE 6 — Controle de Versão
-
-| # | Tarefa | Status |
-|---|--------|--------|
-| 6.1 | Commit inicial com toda a estrutura | ✅ |
-| 6.2 | Push para branch `feat/grupo7-api-spec` | ✅ |
-| 6.3 | Abrir Pull Request para `main` | ⬜ |
 
 ---
 
