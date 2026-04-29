@@ -1,6 +1,6 @@
 # API Vibe Code 🚀
 
-> Exercício da aula de hoje — comparação entre geração de API com **Vibe Code** x **Spec**
+> Exercício da aula de hoje: comparação entre geração de API com **Vibe Code** x **Spec**
 
 ---
 
